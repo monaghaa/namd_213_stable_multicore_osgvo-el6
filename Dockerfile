@@ -133,8 +133,8 @@ RUN cd / && \
 # build info
 RUN echo "Timestamp:" `date --utc` | tee /image-build-info.txt
 
-COPY NAMD_2.13b1_Linux-x86_64-multicore.tar.gz /opt/NAMD_2.13b1_Linux-x86_64-multicore.tar.gz
+COPY NAMD_Git-2019-04-30_Linux-x86_64-multicore.tar.gz /opt/NAMD_Git-2019-04-30_Linux-x86_64-multicore.tar.gz
 
-RUN cd /opt && tar -xzvf NAMD_2.13b1_Linux-x86_64-multicore.tar.gz
+RUN cd /opt && tar -xzvf NAMD_Git-2019-04-30_Linux-x86_64-multicore.tar.gz
 
-ENV PATH="/opt/NAMD_2.13b1_Linux-x86_64-multicore:${PATH}"
+ENV PATH="/opt/NAMD_Git-2019-04-30_Linux-x86_64-multicore:${PATH}"

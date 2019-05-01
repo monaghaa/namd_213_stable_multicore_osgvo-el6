@@ -2,7 +2,7 @@ bootstrap:docker
 From:centos:6
 
 %files 
-NAMD_2.13b1_Linux-x86_64-multicore.tar.gz /opt
+NAMD_Git-2019-04-30_Linux-x86_64-multicore.tar.gz /opt
 
 %post
 
@@ -125,9 +125,9 @@ mkdir -p /host-libs /etc/OpenCL/vendors
 echo "Timestamp:" `date --utc` | tee /image-build-info.txt
 
 cd /opt
-tar -xzvf NAMD_2.13b1_Linux-x86_64-multicore.tar.gz
+tar -xzvf NAMD_Git-2019-04-30_Linux-x86_64-multicore.tar.gz
 
-echo 'export PATH=/opt/NAMD_2.13b1_Linux-x86_64-multicore:$PATH' >>$SINGULARITY_ENVIRONMENT
+echo 'export PATH=NAMD_Git-2019-04-30_Linux-x86_64-multicore:$PATH' >>$SINGULARITY_ENVIRONMENT
 
 % environment
-export PATH=/opt/NAMD_2.13b1_Linux-x86_64-multicore:$PATH
+export PATH=NAMD_Git-2019-04-30_Linux-x86_64-multicore:$PATH
